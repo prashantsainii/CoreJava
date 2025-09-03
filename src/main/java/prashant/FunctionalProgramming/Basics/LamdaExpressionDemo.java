@@ -1,4 +1,4 @@
-package prashant.FunctionalProgramming;
+package prashant.FunctionalProgramming.Basics;
 
 public class LamdaExpressionDemo {
     public static void main(String[] args) {

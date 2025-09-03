@@ -1,4 +1,4 @@
-package prashant.FunctionalProgramming;
+package prashant.FunctionalProgramming.Basics;
 
 @FunctionalInterface
 public interface Hello {
