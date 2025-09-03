@@ -1,6 +1,5 @@
-package prashant.FunctionalProgramming.BiFunctionalInterfaces;
+package prashant.FunctionalProgramming.BiFI;
 
-import java.sql.SQLOutput;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;

@@ -1,4 +1,4 @@
-package prashant.FunctionalProgramming.UnaryOperator;
+package prashant.FunctionalProgramming.FI.UnaryOperator;
 
 import java.util.function.Function;
 import java.util.function.UnaryOperator;

@@ -1,4 +1,4 @@
-package prashant.FunctionalProgramming.Function;
+package prashant.FunctionalProgramming.FI.Function;
 
 import java.util.function.Function;
 

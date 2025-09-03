@@ -1,4 +1,4 @@
-package prashant.FunctionalProgramming.Supplier;
+package prashant.FunctionalProgramming.FI.Supplier;
 
 import java.time.LocalDate;
 import java.util.function.Supplier;

@@ -1,4 +1,4 @@
-package prashant.FunctionalProgramming.Predicate;
+package prashant.FunctionalProgramming.FI.Predicate;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package prashant.FunctionalProgramming.Consumer;
+package prashant.FunctionalProgramming.FI.Consumer;
 
 import java.util.Arrays;
 import java.util.List;
