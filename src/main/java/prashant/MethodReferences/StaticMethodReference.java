@@ -1,5 +1,12 @@
 package prashant.MethodReferences;
 
+// A method reference is a compact, readable shorthand for a lambda that
+// simply calls an existing method. It refers to a method by name and lets
+// the compiler create the appropriate functional interface instance. Method
+// references are type-safe and are converted to lambdas
+
+// Reference to a static method
+
 public class StaticMethodReference {
     public static void main(String[] args) {
 
@@ -10,7 +17,7 @@ public class StaticMethodReference {
 //            System.out.println(sum);
 //            return sum;
 //        };
-//        arithematicOperation.performOperation(2,3);
+//        arithmeticOperation.performOperation(2,3);
 
         // Functionality achieved(for static method) in simplified way
         ArithematicOperation methodReference = StaticMethodReference::performAddition;

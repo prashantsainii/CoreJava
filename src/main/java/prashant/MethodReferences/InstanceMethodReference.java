@@ -1,5 +1,7 @@
 package prashant.MethodReferences;
 
+// Reference to an instance method of a particular object
+
 public class InstanceMethodReference {
     public static void main(String[] args) {
 
