@@ -3,9 +3,9 @@ package prashant.MethodReferences;
 public class StaticMethodReference {
     public static void main(String[] args) {
 
-//        Instead of creating a lambd expression to implement same functionality again
+//        Instead of creating a lambda expression to implement same functionality again
 //         we can use the already present static function via method referencing
-//        ArithematicOperation arithematicOperation = (a, b) -> {
+//        ArithematicOperation arithmeticOperation = (a, b) -> {
 //            int sum = a + b;
 //            System.out.println(sum);
 //            return sum;
