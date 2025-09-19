@@ -36,7 +36,7 @@ class Car extends Engine implements Vehicle {
     }
 
     // Overriding default method (optional)
-//    @Override
+    @Override
     public void fuelType() {                // From Interface
         System.out.println("Fuel type: Diesel");
     }

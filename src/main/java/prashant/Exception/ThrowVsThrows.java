@@ -3,8 +3,8 @@ package prashant.Exception;
 class Parent {
     public static void sub(int a, int b) {
         if(b == 0) {
-            System.out.println("efef");
-            throw new IndexOutOfBoundsException();
+            System.out.println("Some Error");
+            throw new IndexOutOfBoundsException(); // throwing unchecked exception
         }
     }
 }
