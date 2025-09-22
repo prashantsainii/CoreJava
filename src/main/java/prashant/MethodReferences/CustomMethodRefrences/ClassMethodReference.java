@@ -1,4 +1,4 @@
-package prashant.MethodReferences;
+package prashant.MethodReferences.CustomMethodRefrences;
 
 import java.util.List;
 
@@ -6,9 +6,13 @@ import java.util.List;
 
 public class ClassMethodReference {
     public static void main(String[] args) {
+
         var list = List.of("IT", "Sales", "HR", "Marketing", "Finance");
 
-        list.forEach(department -> System.out.println(department));
-        list.forEach(System.out::println);
+        list.stream()
+                .map(String::toLowerCase)  // String method reference
+                .forEach(System.out::println);  // System.out is a particular object (PrintStream)
+
     }
+
 }

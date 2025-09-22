@@ -1,4 +1,4 @@
-package prashant.Run;
+package prashant.OOPS.Polymorphism;
 
 class Parent {
     static void show() {

@@ -16,5 +16,6 @@ public class Demo {
 
         Collections.sort(list); // uses compareTo()
 
+        list.forEach(item -> System.out.println(item.id));
     }
 }

@@ -1,11 +1,11 @@
-package prashant.MethodReferences;
+package prashant.MethodReferences.CustomMethodRefrences;
 
 // Reference to an instance method of a particular object
 
-public class InstanceMethodReference {
+public class ObjectMethodReference {
     public static void main(String[] args) {
 
-        InstanceMethodReference instanceMethodReference = new InstanceMethodReference();
+        ObjectMethodReference instanceMethodReference = new ObjectMethodReference();
         ArithematicOperation methodReference = instanceMethodReference::performAddition;
         methodReference.performOperation(2, 3);
     }

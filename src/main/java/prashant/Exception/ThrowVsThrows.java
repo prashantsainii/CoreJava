@@ -5,6 +5,7 @@ class Parent {
         if(b == 0) {
             System.out.println("Some Error");
             throw new IndexOutOfBoundsException(); // throwing unchecked exception
+//            throw new IOException() // for doing this we will have to add throws in method signature, because IOException is a checked exception
         }
     }
 }

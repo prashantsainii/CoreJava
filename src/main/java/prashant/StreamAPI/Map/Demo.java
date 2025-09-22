@@ -36,6 +36,19 @@ public class Demo {
         System.out.println(upperCaseNames);
         System.out.println(namesLength);
         System.out.println(stringNumbers);
+
+
+
+        List<List<String>> listOfList = Arrays.asList(
+                Arrays.asList("Prashant", "Saini"),
+                Arrays.asList("Noida", "Bengaluru")
+        );
+
+        List<String> flatList = listOfList.stream()
+                                .flatMap(List::stream)   // flatten List<List<String>> → Stream<String>
+                                .toList();
+
+        System.out.println(flatList);
     }
 }
 
