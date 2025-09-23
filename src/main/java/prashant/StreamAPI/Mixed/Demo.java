@@ -110,10 +110,8 @@ public class Demo {
 //        System.out.println(flatList);
 
         // Concatenate Strings
-        String concatStr = listStr.stream().collect(Collectors.joining(" "));
-
-
-        System.out.println(concatStr);
+//        String concatStr = listStr.stream().collect(Collectors.joining(" "));
+//        System.out.println(concatStr);
 
 
 
