@@ -1,9 +1,7 @@
 package prashant.StreamAPI.Mixed;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Demo {
     public static void main(String[] args) {
@@ -32,9 +30,14 @@ public class Demo {
 
 
 
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,9);
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,8,9,9);
         List<Integer> listDesc = Arrays.asList(9,8,7,6,5,4,3,2,1);
-        List<String> listStr = Arrays.asList("Prashant", "Prashu", "Saini", "Prakhar", "Jauhari");
+        List<String> listStr = Arrays.asList("Prashant", "Prashu", "Sainii", "Prakhar", "Jauhari");
+        List<List<String>> listOfListStr = Arrays.asList(
+                                            Arrays.asList("Prashant", "Saini"),
+                                            Arrays.asList("Hello", "World"),
+                                            Arrays.asList("Current", "Next")
+                                            );
 
         // Find even number
 //        List<Integer> evenNumbers = list.stream().filter(n->n%2 == 0).toList();
@@ -73,7 +76,44 @@ public class Demo {
 
 
         // Sum of Numbers in a List
-//        long totalSum = list.stream().sum();
+//        double totalSum = list.stream().mapToInt(Integer::intValue).sum();
+//        System.out.println(totalSum);
+
+        // Average of Numbers in a List
+//        double average = list.stream().mapToInt(Integer::intValue).average().orElse(0);
+//        System.out.println(average);
+
+
+        // Check if Any String Matches a Condition
+//        boolean res = listStr.stream().anyMatch(str->str.contains("Pra"));
+//        System.out.println(res);
+
+
+        // Find Duplicate Elements in a List
+//        Set<Integer> set = new HashSet<>();
+//        List<Integer> duplicates = list.stream()
+//                                    .filter(s -> !set.add(s))
+//                                    .toList();
+//        System.out.println(duplicates);
+
+
+        // Group Strings by Length
+//        Map<Integer, List<String>> groupByLength = listStr.stream()
+//                .collect(Collectors.groupingBy(String::length));
+//        System.out.println(groupByLength);
+
+
+        // Flatten list of list
+//        List<String> flatList = listOfListStr.stream()
+//                                .flatMap(List::stream)
+//                                .toList();
+//        System.out.println(flatList);
+
+        // Concatenate Strings
+        String concatStr = listStr.stream().collect(Collectors.joining(" "));
+        System.out.println(concatStr);
+
+
 
 
 
