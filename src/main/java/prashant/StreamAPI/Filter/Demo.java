@@ -2,6 +2,7 @@ package prashant.StreamAPI.Filter;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -10,6 +11,9 @@ public class Demo {
 
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9);
         List<String> names = Arrays.asList("Prashant", "Ayush", "Shubham", "Divyansh", "Abhishek");
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,8,9,9);
+        List<Integer> anotherList = Arrays.asList(1,2,5,6,8);
+        List<String> listStrWithNull = Arrays.asList("Prashant", "Prashu", null,  "Sainii", "Prakhar", "Jauhari", null);
 
         // Even Numbers
         List<Integer> evenNumbers = numbers.stream()
@@ -22,28 +26,33 @@ public class Demo {
                                     .collect(Collectors.toList());
 
         // First element greater than 4
-        Optional<Integer> first = numbers.stream()
+        long first = numbers.stream()
                                   .filter(n -> n > 4)
-                                  .findFirst();
+                                  .findFirst()
+                                  .orElseThrow();
+
 
         // Min element greater than 4
         Optional<Integer> smallestGreaterThan4 = numbers.stream()
                                    .filter(n -> n > 4)
-                                   .min(Integer::compareTo);
+                                   .min(Integer::compare);
 
         // Count of elements > 3
-        long count = numbers.stream().filter(n -> n>3).count();
+        long count = numbers.stream()
+                .filter(n -> n>3)
+                .count();
+
+        // Remove Null Values
+        List<String> listWithNotNull = listStrWithNull.stream()
+                .filter(Objects::nonNull)
+                .toList();
+        System.out.println(listWithNotNull);
 
 
-        System.out.println("List of even numbers : " + evenNumbers);
-        System.out.println("Lengthy names : " + lengthyNames);
-        System.out.println("First element greater than 4 : " + first);
-        System.out.println("Smallest element greater than 4 : " + smallestGreaterThan4.get());
-        System.out.println("Count of element greater than 3 : " + count);
-
-        // For directly printing the result
-//        names.stream()
-//                .filter(name -> name.length() > 5)
-//                .forEach(System.out::println);
+        // Find Common Elements Between Two Lists
+        List<Integer> commonList = list.stream()
+                .filter(anotherList::contains)
+                .toList();
+        System.out.println(commonList);
     }
 }

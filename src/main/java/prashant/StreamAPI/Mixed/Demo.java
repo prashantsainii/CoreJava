@@ -6,11 +6,11 @@ import java.util.stream.Collectors;
 public class Demo {
     public static void main(String[] args) {
 
-//        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9);
 //        List<Integer> listWithDup = Arrays.asList(1,1,3,3,4,4,4,4,2,2,2);
 //
 //        // Max Number
-//        Optional<Integer> maxNum = numbers.stream().max(Integer::compare);
+        Optional<Integer> maxNum = numbers.stream().max(Integer::compare);
 //
 //        // Min Number
 //        Optional<Integer> minNum = numbers.stream().min(Integer::compare);
@@ -33,6 +33,7 @@ public class Demo {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,8,9,9);
         List<Integer> listDesc = Arrays.asList(9,8,7,6,5,4,3,2,1);
         List<String> listStr = Arrays.asList("Prashant", "Prashu", "Sainii", "Prakhar", "Jauhari");
+        List<String> listStrWithNull = Arrays.asList("Prashant", "Prashu", null,  "Sainii", "Prakhar", "Jauhari", null);
         List<List<String>> listOfListStr = Arrays.asList(
                                             Arrays.asList("Prashant", "Saini"),
                                             Arrays.asList("Hello", "World"),
@@ -113,26 +114,45 @@ public class Demo {
 //        String concatStr = listStr.stream().collect(Collectors.joining(" "));
 //        System.out.println(concatStr);
 
+        // Find the Longest String
+//        Optional<String> longestStr = listStr.stream().map(word -> word.length()).max(Integer::compare);
 
 
+        // Create a custom collector to join strings with a delimiter.
+        String joinedStr = listStr.stream().collect(Collectors.joining(", "));
 
 
+        // Find Nth Largest Element in a List
+        int findThisLargest = 3;
+        int nthLargest = list.stream()
+                .sorted()
+                .distinct()
+                .skip(findThisLargest)
+                .findFirst()
+                .orElseThrow();
+        System.out.println(nthLargest);
 
 
+        // Remove Duplicates Without Collectors
+        List<Integer> uniqueList = list.stream()
+                .distinct()
+                .toList();
+        System.out.println(uniqueList);
 
+        // Skip the first 3 elements and limit the result to the next 2.
+        List<Integer> skippedLimit = list.stream()
+                .skip(3)
+                .limit(2)
+                .toList();
+        System.out.println(skippedLimit);
 
+        // Calculate the Product of All Numbers
+        int product = list.stream()
+                .reduce(1, (a,b) -> a*b);
+        System.out.println(product);
 
-
-
-
-
-
-
-
-
-
-
-
+//        Ans1 : yes beacause main thread is responsible for printing Hello from main, where as Hello from thread will be handled by another thread
+//        Ans2 : numbers will not be in the order beacuse both trread will start the execution at same time, so we cannot say for sure that numbers will be in order,
 
     }
 }

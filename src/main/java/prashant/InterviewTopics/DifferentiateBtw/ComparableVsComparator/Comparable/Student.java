@@ -14,5 +14,6 @@ class Student implements Comparable<Student> {
     @Override
     public int compareTo(Student other) {
         return this.id - other.id; // sort by id (natural order)
+//        return this.name.compareTo(other.name); // sort by name (natural order)
     }
 }

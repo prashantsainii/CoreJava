@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ClassMethodRef {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("Prashant", "Vanshika", "Saini");
+        List<String> names = Arrays.asList("Prashant", "Saini", "Bangalore");
 
         // Instead of using (s -> s.toUpperCase())
         names.stream()

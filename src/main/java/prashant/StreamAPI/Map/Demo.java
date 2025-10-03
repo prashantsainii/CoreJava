@@ -2,13 +2,17 @@ package prashant.StreamAPI.Map;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Demo {
     public static void main(String[] args) {
 
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,8,9,9);
         List<String> names = Arrays.asList("Prashant", "Ayush", "Shubham", "Divyansh", "Abhishek");
+
+        List<String> listStr = Arrays.asList("Prashant", "Prashu", "Sainii", "Prakhar", "Jauhari");
 
         // Square of all numbers
         List<Integer> squares = numbers.stream()
@@ -49,6 +53,39 @@ public class Demo {
                                 .toList();
 
         System.out.println(flatList);
+
+        String str = "TemporaryString";
+
+        // Count Frequency of Characters in a String
+        Map<Character, Long> freqMap = str.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+
+
+        // Parallel Stream to Compute Sum
+        int sum = list.parallelStream()
+                .mapToInt(Integer::intValue)
+                .sum();
+
+        // Calculate Average of Numbers
+        double average = list.stream()
+                .mapToInt(Integer::intValue)
+                .average()
+                .orElse(0);
+        System.out.println(average);
+
+
+        // Find the Sum of Squares of Even Numbers
+        int sumOfEvenSquares = list.stream()
+                .filter(n -> n % 2 == 0)
+                .mapToInt(n -> n*n)
+                .sum();
+        System.out.println(sumOfEvenSquares);
+
+
+
+
+
     }
 }
 
