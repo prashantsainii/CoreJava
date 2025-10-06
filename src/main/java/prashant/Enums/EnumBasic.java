@@ -1,8 +1,6 @@
 package prashant.Enums;
 
-
 /*
-*
 *   enum (short for enumeration) is a special data type in Java used to
 *   define a collection of constant values.
 *
@@ -10,9 +8,7 @@ package prashant.Enums;
 *
 *   2. Implicitly static and final.
 *
-*
-*
-**/
+*/
 enum Day {
     MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 }

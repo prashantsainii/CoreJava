@@ -1,6 +1,7 @@
 package prashant.Exception;
 
-class MyException extends Exception{
+
+class MyException extends Exception {     // extend RuntimeException for Unchecked Exceptions
     public MyException(String message) {
         super(message);
     }

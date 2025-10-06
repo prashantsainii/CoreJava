@@ -3,6 +3,7 @@ package prashant.StreamAPI.Map;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Demo {
@@ -55,6 +56,13 @@ public class Demo {
         System.out.println(flatList);
 
         String str = "TemporaryString";
+
+        // Find First Non-Repeated Character in a String
+        Character ch = str.chars()
+                .mapToObj(c -> (char) c)
+                .filter(c -> str.indexOf(c) == str.lastIndexOf(c))
+                .findFirst()
+                .orElseThrow();
 
         // Count Frequency of Characters in a String
         Map<Character, Long> freqMap = str.chars()

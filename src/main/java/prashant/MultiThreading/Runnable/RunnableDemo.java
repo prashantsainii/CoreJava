@@ -3,7 +3,7 @@ package prashant.MultiThreading.Runnable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ThreadPoolingDemo {
+public class RunnableDemo {
     public static void main(String[] args) {
         // Thread pool with 3 worker threads
         ExecutorService executor = Executors.newFixedThreadPool(3);

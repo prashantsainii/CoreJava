@@ -54,5 +54,11 @@ public class Demo {
                 .filter(anotherList::contains)
                 .toList();
         System.out.println(commonList);
+
+        // Count Strings with Specific Prefix
+        long count1 = names.stream()
+                .filter(str -> str.startsWith("Pra"))
+                .count();
+        System.out.println(count1);
     }
 }

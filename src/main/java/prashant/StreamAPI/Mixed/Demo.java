@@ -65,26 +65,6 @@ public class Demo {
 //        list.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
 
 
-        // Count Strings with Specific Prefix
-//        long count = listStr.stream().filter(str -> str.startsWith("Pra")).count();
-//        System.out.println(count);
-
-
-
-        // Convert List of Strings to Uppercase
-//        List<String> upperCaseStr = listStr.stream().map(String::toUpperCase).toList();
-//        System.out.println(upperCaseStr);
-
-
-        // Sum of Numbers in a List
-//        double totalSum = list.stream().mapToInt(Integer::intValue).sum();
-//        System.out.println(totalSum);
-
-        // Average of Numbers in a List
-//        double average = list.stream().mapToInt(Integer::intValue).average().orElse(0);
-//        System.out.println(average);
-
-
         // Check if Any String Matches a Condition
 //        boolean res = listStr.stream().anyMatch(str->str.contains("Pra"));
 //        System.out.println(res);
@@ -110,9 +90,11 @@ public class Demo {
 //                                .toList();
 //        System.out.println(flatList);
 
+
         // Concatenate Strings
 //        String concatStr = listStr.stream().collect(Collectors.joining(" "));
 //        System.out.println(concatStr);
+
 
         // Find the Longest String
 //        Optional<String> longestStr = listStr.stream().map(word -> word.length()).max(Integer::compare);

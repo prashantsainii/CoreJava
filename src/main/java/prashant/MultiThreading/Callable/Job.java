@@ -1,4 +1,4 @@
-package prashant.MultiThreading.CallableAndFuture;
+package prashant.MultiThreading.Callable;
 
 import java.util.concurrent.Callable;
 
