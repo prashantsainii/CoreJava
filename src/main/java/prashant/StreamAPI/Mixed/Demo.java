@@ -95,11 +95,6 @@ public class Demo {
 //        String concatStr = listStr.stream().collect(Collectors.joining(" "));
 //        System.out.println(concatStr);
 
-
-        // Find the Longest String
-//        Optional<String> longestStr = listStr.stream().map(word -> word.length()).max(Integer::compare);
-
-
         // Create a custom collector to join strings with a delimiter.
         String joinedStr = listStr.stream().collect(Collectors.joining(", "));
 

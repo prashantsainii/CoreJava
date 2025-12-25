@@ -13,6 +13,8 @@ public class Demo {
                                             Executors.defaultThreadFactory(),
                                             new ThreadPoolExecutor.AbortPolicy());
 
+        ThreadPoolExecutor exe = new ThreadPoolExecutor(2, 4, 1, TimeUnit.MINUTES, new ArrayBlockingQueue<>(2));
+
         Runnable task = () -> {
             try {
                 System.out.println("Starting execution by " + Thread.currentThread().getName());

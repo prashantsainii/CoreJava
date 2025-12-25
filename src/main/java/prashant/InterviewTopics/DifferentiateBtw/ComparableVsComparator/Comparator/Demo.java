@@ -16,7 +16,8 @@ public class Demo {
         Collections.sort(list, Student.idComparator);
         Collections.sort(list, Comparator.comparing(stdObj -> stdObj.name));    // direct
         Collections.sort(list, (stdObj1, stdObj2) -> stdObj1.name.compareTo(stdObj2.name));
-        Collections.sort(list, comp);
+        Collections.sort(list, (stdObj1, stdObj2) -> stdObj1.id - stdObj2.id);
+//        Collections.sort(list, comp);
 
         list.forEach(item -> System.out.println(item.name));
 

@@ -6,6 +6,9 @@ import java.util.function.Supplier;
 public class SupplierDemo {
     public static void main(String[] args) {
 
+//        Supplier is used when we want to generate or fetch a value without any
+//        input. For example, creating objects lazily or generating random values
+
         Supplier<Integer> getDate = () -> LocalDate.now().getDayOfMonth();
         System.out.println("Today's Date is : " + getDate.get());
 

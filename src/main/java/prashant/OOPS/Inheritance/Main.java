@@ -16,7 +16,7 @@ class Parent {
         System.out.println("this is greet in parent");
     }
 
-    //    @Override     // static parent class method do not override
+//        @Override     // static parent class method do not override
     static void greet2() {
         System.out.println("Greet in parent");
     }
@@ -43,7 +43,7 @@ class Child extends Parent{
 //        System.out.println("Greet in child");
 //    }
 
-    //    @Override    // here overriding is not happening and greet method of child is independent of parent greet method
+//        @Override    // here overriding is not happening and greet method of child is independent of parent greet method
     static void greet() {
         System.out.println("greet child");
     }

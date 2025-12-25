@@ -60,5 +60,10 @@ public class Demo {
                 .filter(str -> str.startsWith("Pra"))
                 .count();
         System.out.println(count1);
+
+        // Find All Palindromic Strings
+        List<String> palindromes = names.stream()
+                .filter(str -> str.equals(new StringBuilder(str).reverse().toString()))
+                .toList();
     }
 }

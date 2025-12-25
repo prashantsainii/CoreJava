@@ -44,7 +44,8 @@ public class Demo {
         // IMP -> only start() of Thread will start new thread,
         // directly calling run() of Thread will continue the execution in same thread
 
-        thread.start();
+//        thread.start();
+        runnableDemo.run();
 
         System.out.println("Finish in main method : " + Thread.currentThread().getName());
 

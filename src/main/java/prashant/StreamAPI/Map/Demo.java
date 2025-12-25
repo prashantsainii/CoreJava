@@ -55,19 +55,8 @@ public class Demo {
 
         System.out.println(flatList);
 
-        String str = "TemporaryString";
 
-        // Find First Non-Repeated Character in a String
-        Character ch = str.chars()
-                .mapToObj(c -> (char) c)
-                .filter(c -> str.indexOf(c) == str.lastIndexOf(c))
-                .findFirst()
-                .orElseThrow();
 
-        // Count Frequency of Characters in a String
-        Map<Character, Long> freqMap = str.chars()
-                .mapToObj(c -> (char) c)
-                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
 
 
         // Parallel Stream to Compute Sum
@@ -90,9 +79,32 @@ public class Demo {
                 .sum();
         System.out.println(sumOfEvenSquares);
 
+        // Reverse Each String in a List
+        List<String> ans = names.stream()
+                .map(word -> new StringBuilder(word).reverse().toString())
+                .toList();
+        System.out.println(ans);
+
+        String str = "TemporaryString";
+        // Find the Most Frequent Character in a String
+        Character maxChar = str.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c->c, Collectors.counting()))
+                .entrySet().stream()
+                .max(Map.Entry.comparingByValue())
+                .map(Map.Entry::getKey)
+                .orElseThrow();
+        System.out.println(maxChar);
+
+// ________________________________________________________________________
 
 
-
+        // Find First Non-Repeated Character in a String
+        Character ch = str.chars()
+                .mapToObj(c -> (char) c)
+                .filter(c -> str.indexOf(c) == str.lastIndexOf(c))
+                .findFirst()
+                .orElseThrow();
 
     }
 }

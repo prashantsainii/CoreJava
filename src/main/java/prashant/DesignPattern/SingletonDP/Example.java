@@ -22,5 +22,19 @@ public class Example {
         System.out.println(dclInstance1.hashCode());
         System.out.println(dclInstance2.hashCode());
 
+//        For simulating why synchronization is needed while creating singleton object
+//        Thread th1 = new Thread(() -> {
+//            LazySingleton instance = LazySingleton.getSingletonInstance();
+//            System.out.println(instance.hashCode());
+//        });
+//
+//        Thread th2 = new Thread(() -> {
+//            LazySingleton instance = LazySingleton.getSingletonInstance();
+//            System.out.println(instance.hashCode());
+//        });
+//
+//        th1.start();
+//        th2.start();
+
     }
 }

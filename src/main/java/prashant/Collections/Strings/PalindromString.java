@@ -9,13 +9,13 @@ public class PalindromString {
         System.out.println("Enter the word");
 
         String str = sc.nextLine();
-        String reversedStr = "";
+        StringBuilder reversedStr = new StringBuilder();
 
         for(int i=str.length()-1; i>=0; i--) {
-            reversedStr = reversedStr + str.charAt(i);
+            reversedStr.append(str.charAt(i));
         }
 
-        if(reversedStr.equals(str)) {
+        if(reversedStr.toString().equals(str)) {
             System.out.println("Word is palindrom");
         }
         else System.out.println("Word is not palindrom");
