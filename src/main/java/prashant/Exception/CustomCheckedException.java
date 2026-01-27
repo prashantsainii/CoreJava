@@ -21,15 +21,17 @@ public class CustomCheckedException {
 }
 
 /*
-    Compile Time (Handled by Compiler)
+    A checked exception - Compile Time (Handled by Compiler)
+        -> Is checked at compile time
+        -> Must be either:
+               1. Handled using try–catch(Exception is handled gracefully)
+               2. Declared using throws in the method signature(program terminates abnormally)
 
-    The Java compiler checks:
-        -> If a method throws a checked exception
-        -> Whether it is:
-            ~ handled using try-catch, OR
-            ~ declared using throws
-
-    If not → Compilation error
+    Example :
+        IOException
+        SQLException
+        FileNotFoundException
+        ClassNotFoundException
 
 */
 

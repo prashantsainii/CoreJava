@@ -21,7 +21,7 @@ public class ThrowVsThrows {
             Parent.sub(3,0);
         }
         catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace();    // Exception is handled gracefully
         }
 
     }

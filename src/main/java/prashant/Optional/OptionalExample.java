@@ -27,3 +27,11 @@ public class OptionalExample {
         name2.ifPresent(n -> System.out.println("Found user: " + n));   // Won’t print anything
     }
 }
+//✅ of() -> Use when you are 100% sure value is NOT null
+//✅ ofNullable() -> Use when value may be null
+//✅ ifPresent()
+//✅ orElse()
+//✅ orElseGet() -> Default is evaluated only if Optional is empty
+//✅ orElseThrow() -> Throws exception if value is missing
+//✅ map()
+//✅ filter()
